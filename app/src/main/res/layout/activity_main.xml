@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/btn_menu"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="30dp"
+        android:src="@drawable/ic_menu"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/btn_notification"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_notification"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toStartOf="@id/btn_favorite"
+        app:layout_constraintTop_toTopOf="@id/btn_menu"
+        app:layout_constraintBottom_toBottomOf="@id/btn_menu" />
+
+    <ImageButton
+        android:id="@+id/btn_favorite"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="35dp"
+        android:src="@drawable/ic_favorite"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_menu"
+        app:layout_constraintBottom_toBottomOf="@id/btn_menu"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp"
+        android:text="CHOOSE\nHAIR STYLE"
+        android:textSize="26sp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/tertiary_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_menu"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_item1"
+        android:layout_width="150dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        app:cardBackgroundColor="@color/tertiary_color"
+        app:cardCornerRadius="25dp"
+        app:contentPaddingTop="30dp"
+        app:contentPaddingBottom="30dp"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintEnd_toStartOf="@id/cv_item2"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_gravity="center_horizontal"
+            android:text="VOLUMINOUS LAYERS"
+            android:textSize="11sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/secondary_color"/>
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="160dp"
+            android:src="@drawable/girl_b"
+            android:layout_gravity="bottom|center_horizontal"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_item2"
+        android:layout_width="150dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="8dp"
+        app:cardBackgroundColor="@color/tertiary_color"
+        app:cardCornerRadius="25dp"
+        app:contentPaddingTop="30dp"
+        app:contentPaddingBottom="30dp"
+        app:layout_constraintStart_toEndOf="@id/cv_item1"
+        app:layout_constraintEnd_toEndOf="@id/btn_favorite"
+        app:layout_constraintTop_toTopOf="@id/cv_item1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_gravity="center_horizontal"
+            android:text="BANGS PONYTAIL"
+            android:textSize="11sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/secondary_color"/>
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="160dp"
+            android:src="@drawable/girl_c"
+            android:layout_gravity="bottom|center_horizontal"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_item3"
+        android:layout_width="150dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        app:cardBackgroundColor="@color/tertiary_color"
+        app:cardCornerRadius="25dp"
+        app:contentPaddingTop="30dp"
+        app:contentPaddingBottom="30dp"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintEnd_toStartOf="@id/cv_item4"
+        app:layout_constraintTop_toBottomOf="@id/cv_item1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_gravity="center_horizontal"
+            android:text="BOUNCY CURLS"
+            android:textSize="11sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/secondary_color"/>
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="160dp"
+            android:src="@drawable/girl_d"
+            android:layout_gravity="bottom|center_horizontal"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_item4"
+        android:layout_width="150dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="8dp"
+        app:cardBackgroundColor="@color/tertiary_color"
+        app:cardCornerRadius="25dp"
+        app:contentPaddingTop="30dp"
+        app:contentPaddingBottom="30dp"
+        app:layout_constraintStart_toEndOf="@id/cv_item1"
+        app:layout_constraintEnd_toEndOf="@id/btn_favorite"
+        app:layout_constraintTop_toTopOf="@id/cv_item3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_gravity="center_horizontal"
+            android:text="LONG PIXIE"
+            android:textSize="11sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/secondary_color"/>
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="160dp"
+            android:src="@drawable/girl_e"
+            android:layout_gravity="bottom|center_horizontal"/>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="bottom|center_horizontal"
+        android:text="MORE ▽"
+        android:textSize="12sp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/tertiary_color"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_item4"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
